@@ -162,7 +162,7 @@ nav .nav-links a:hover {
 
 .hero .cta-button {
   display: inline-block;
-  background: var(--blue);
+  background: #e8a012;
   color: var(--white);
   text-decoration: none;
   padding: 14px 36px;
@@ -174,7 +174,7 @@ nav .nav-links a:hover {
 }
 
 .hero .cta-button:hover {
-  background: var(--blue-dark);
+  background: #c9880e;
   transform: translateY(-2px);
 }
 
