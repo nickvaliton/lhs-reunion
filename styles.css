@@ -478,6 +478,7 @@ section {
 .class-photo-wrapper {
   position: relative;
   width: 100%;
+  min-height: 120px;
   max-height: 500px;
   overflow: hidden;
 }
