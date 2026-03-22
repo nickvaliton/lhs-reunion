@@ -1,10 +1,38 @@
 [
   {
-    "name": "John Smith",
+    "name": "Steph Amico",
     "plusOne": true
   },
   {
-    "name": "Jane Doe",
+    "name": "Nicole Boyson",
+    "plusOne": false
+  },
+  {
+    "name": "Jess Caless",
+    "plusOne": true
+  },
+  {
+    "name": "Lexi Foster",
+    "plusOne": true
+  },
+  {
+    "name": "Gabi Foster",
+    "plusOne": false
+  },
+  {
+    "name": "Dylan Nadeau",
+    "plusOne": false
+  },
+  {
+    "name": "Nick Valiton",
+    "plusOne": false
+  },
+  {
+    "name": "Evelyn (Zimmerman) Leger",
+    "plusOne": true
+  },
+  {
+    "name": "Shana McGranor",
     "plusOne": false
   }
 ]
