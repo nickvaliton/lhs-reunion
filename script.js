@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(function (attendees) {
       const grid = document.getElementById("attendee-grid");
       const count = document.getElementById("attendee-count");
-      count.textContent = attendees.length;
+      const totalGuests = attendees.length + attendees.filter(function (a) { return a.plusOne; }).length;
+      count.textContent = totalGuests;
 
       attendees
         .sort(function (a, b) {
