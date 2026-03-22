@@ -1,0 +1,683 @@
+/* ===== Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===== Variables ===== */
+:root {
+  --blue: #1a3a8a;
+  --blue-light: #2c5cc5;
+  --blue-dark: #0f2560;
+  --white: #ffffff;
+  --off-white: #f5f5f7;
+  --gray-light: #e8e8ec;
+  --grid-color: #c8cad4;
+  --script-font: 'Dancing Script', cursive;
+  --body-font: 'Inter', sans-serif;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  color: #1a1a2e;
+  line-height: 1.6;
+  background-color: var(--off-white);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-attachment: fixed;
+}
+
+/* ===== Doodle accents ===== */
+.doodle-corner-tl,
+.doodle-corner-tr,
+.doodle-corner-bl,
+.doodle-corner-br {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.doodle-corner-tl {
+  top: 12px;
+  left: 12px;
+}
+
+.doodle-corner-tr {
+  top: 12px;
+  right: 12px;
+}
+
+.doodle-corner-bl {
+  bottom: 12px;
+  left: 12px;
+}
+
+.doodle-corner-br {
+  bottom: 12px;
+  right: 12px;
+}
+
+/* Chevron doodle (top-left style from flyer) */
+.doodle-chevrons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.doodle-chevrons::before {
+  content: '>>>>';
+  font-size: 28px;
+  color: var(--blue);
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  letter-spacing: -4px;
+  opacity: 0.3;
+}
+
+/* ===== Navigation ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--blue);
+  z-index: 1000;
+  padding: 0 24px;
+  box-shadow: 0 2px 12px rgba(26, 58, 138, 0.3);
+}
+
+nav .nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+nav .nav-brand {
+  font-family: var(--script-font);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav .nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav .nav-links a:hover {
+  color: var(--white);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 60px;
+  overflow: hidden;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(26, 58, 138, 0.2));
+}
+
+.hero h1 {
+  font-family: var(--script-font);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: var(--blue);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.hero .subtitle {
+  font-family: var(--script-font);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--blue-light);
+  margin-bottom: 24px;
+}
+
+.hero .tagline {
+  font-size: 1.15rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.hero .hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.hero .hero-detail {
+  background: var(--blue);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.hero .cta-button {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 16px rgba(26, 58, 138, 0.3);
+}
+
+.hero .cta-button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+/* ===== Section shared ===== */
+section {
+  padding: 80px 24px;
+  position: relative;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--script-font);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--blue);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===== Countdown ===== */
+.countdown-section {
+  background: var(--blue);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.countdown-section .section-title {
+  color: var(--white);
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px 16px;
+  min-width: 100px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.countdown-unit .number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.countdown-unit .label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.countdown-message {
+  color: var(--white);
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== Event Details ===== */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.detail-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--gray-light);
+  text-align: center;
+}
+
+.detail-card .detail-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.detail-card h3 {
+  color: var(--blue);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.detail-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.detail-card a {
+  color: var(--blue-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.detail-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Tickets ===== */
+.tickets-section {
+  background: var(--white);
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.ticket-box {
+  background: var(--off-white);
+  border: 2px dashed var(--blue);
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ticket-box::before,
+.ticket-box::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: var(--white);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px dashed var(--blue);
+}
+
+.ticket-box::before {
+  left: -18px;
+}
+
+.ticket-box::after {
+  right: -18px;
+}
+
+#price-phase {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price-tag {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.price-tag.early-bird {
+  color: #1a8a3a;
+  font-size: 2rem;
+}
+
+.price-tag.regular-preview {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.ticket-info {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.venmo-button {
+  display: inline-block;
+  background: #008CFF;
+  color: var(--white);
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.venmo-button:hover {
+  background: #006fcc;
+  transform: translateY(-2px);
+}
+
+/* ===== Who's Coming ===== */
+.attendee-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.attendee-count {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.attendee-count strong {
+  color: var(--blue);
+  font-size: 1.3rem;
+}
+
+#attendee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.attendee-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--gray-light);
+}
+
+.attendee-name {
+  font-weight: 500;
+  color: #1a1a2e;
+  font-size: 0.95rem;
+}
+
+.plus-one {
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-question {
+  align-self: flex-start;
+  background: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 20px 20px 20px 4px;
+  padding: 16px 22px;
+  font-weight: 600;
+  color: var(--blue);
+  max-width: 85%;
+  font-size: 1rem;
+}
+
+.faq-answer {
+  align-self: flex-end;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 20px 20px 4px 20px;
+  padding: 16px 22px;
+  max-width: 85%;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Class Photo ===== */
+.class-photo-section {
+  padding: 0;
+  background: var(--blue-dark);
+}
+
+.class-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.class-photo-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+.class-photo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 37, 96, 0.45);
+}
+
+.class-photo-overlay span {
+  font-family: var(--script-font);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Contact & Footer ===== */
+.contact-section {
+  text-align: center;
+}
+
+.contact-section p {
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.contact-email {
+  display: inline-block;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--blue-light);
+  padding-bottom: 2px;
+}
+
+.contact-email:hover {
+  color: var(--blue-dark);
+}
+
+.social-links {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+footer {
+  background: var(--blue-dark);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 24px;
+  font-size: 0.85rem;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--blue);
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .countdown-unit {
+    min-width: 70px;
+    padding: 16px 12px;
+  }
+
+  .countdown-unit .number {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    padding: 80px 20px 40px;
+  }
+
+  .ticket-box {
+    padding: 32px 20px;
+  }
+
+  .ticket-box::before,
+  .ticket-box::after {
+    display: none;
+  }
+
+  #attendee-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .faq-question,
+  .faq-answer {
+    max-width: 95%;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}

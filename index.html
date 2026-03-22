@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LHS Class of 2016 — 10-Year Reunion</title>
+  <meta name="description" content="Leominster High School Class of 2016 10-Year Reunion — May 9, 2026 at Wachusett Brewing Company, Westminster, MA">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">LHS 2016</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#details">Details</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#whos-coming">Who's Coming</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img src="images/logo.png" alt="Leominster High School Logo" class="hero-logo">
+    <h1>Class of 2016</h1>
+    <div class="subtitle">10-Year Reunion</div>
+    <p class="tagline">10 Years Later &mdash; Same Class, New Stories</p>
+    <div class="hero-details">
+      <span class="hero-detail">May 9, 2026</span>
+      <span class="hero-detail">2:00 PM &ndash; 6:00 PM</span>
+      <span class="hero-detail">Wachusett Brewing Co.</span>
+    </div>
+    <a href="#tickets" class="cta-button">Get Your Tickets</a>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown-section" id="countdown">
+    <div class="section-inner">
+      <h2 class="section-title">Countdown to Reunion</h2>
+      <div class="countdown-grid">
+        <div class="countdown-unit">
+          <div class="number" id="days">--</div>
+          <div class="label">Days</div>
+        </div>
+        <div class="countdown-unit">
+          <div class="number" id="hours">--</div>
+          <div class="label">Hours</div>
+        </div>
+        <div class="countdown-unit">
+          <div class="number" id="minutes">--</div>
+          <div class="label">Minutes</div>
+        </div>
+        <div class="countdown-unit">
+          <div class="number" id="seconds">--</div>
+          <div class="label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Details -->
+  <section id="details">
+    <div class="section-inner">
+      <h2 class="section-title">Event Details</h2>
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-icon">&#128197;</div>
+          <h3>When</h3>
+          <p>Saturday, May 9, 2026<br>2:00 PM &ndash; 6:00 PM</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">&#127866;</div>
+          <h3>Where</h3>
+          <p>Wachusett Brewing Company<br>175 State Rd E<br>Westminster, MA 01473</p>
+          <p style="margin-top: 8px;"><a href="https://maps.google.com/?q=Wachusett+Brewing+Company+175+State+Rd+E+Westminster+MA+01473" target="_blank" rel="noopener">Get Directions</a></p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">&#127881;</div>
+          <h3>What to Expect</h3>
+          <p>Casual hangout in the main tent. Food and drinks available for purchase at the bar.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">&#128664;</div>
+          <h3>Parking</h3>
+          <p>Free parking available at the venue. Plenty of space for everyone.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">&#128101;</div>
+          <h3>Plus Ones</h3>
+          <p>Plus ones are welcome! Just purchase a ticket for each guest attending.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">&#128085;</div>
+          <h3>Dress Code</h3>
+          <p>Come as you are — casual and comfortable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tickets -->
+  <section class="tickets-section" id="tickets">
+    <div class="section-inner">
+      <h2 class="section-title">Get Your Tickets</h2>
+      <div class="ticket-box">
+        <div id="price-phase">
+          <!-- Populated by JS based on current date -->
+        </div>
+        <p class="ticket-info">
+          Purchase a ticket for yourself and each of your guests.<br>
+          Venmo <strong>Dylan Nadeau @dylanmn</strong> and include the<br>
+          <strong>full name of every ticket holder</strong> in the Venmo note.
+        </p>
+        <a href="https://venmo.com/dylanmn" target="_blank" rel="noopener" class="venmo-button">
+          Pay via Venmo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who's Coming -->
+  <section id="whos-coming">
+    <div class="section-inner">
+      <h2 class="section-title">Who's Coming</h2>
+      <div class="attendee-header">
+        <p class="attendee-count"><strong id="attendee-count">0</strong> registered so far</p>
+      </div>
+      <div id="attendee-grid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question">Where and when is the reunion?</div>
+          <div class="faq-answer">May 9th, 2026 from 2PM&ndash;6PM at Wachusett Brewing Company, 175 State Rd E, Westminster, MA 01473.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I get tickets?</div>
+          <div class="faq-answer">Venmo Dylan Nadeau at @dylanmn. Include the full name of every ticket holder in the Venmo note so we can add you to the list.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How much are tickets?</div>
+          <div class="faq-answer">Early bird tickets are $16 per person through April 9th. After that, tickets are $20 per person through May 9th.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I bring a guest?</div>
+          <div class="faq-answer">Yes! Plus ones are welcome. Just purchase a ticket for each guest attending.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What should I wear?</div>
+          <div class="faq-answer">Keep it casual — it's a relaxed hangout at a brewery. Come as you are!</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is there parking?</div>
+          <div class="faq-answer">Yes, free parking is available right at the venue with plenty of space.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Will there be food and drinks?</div>
+          <div class="faq-answer">Food and drinks are available for purchase at the bar. Your ticket covers the venue and event — food and drinks are on your own.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Who do I contact with questions?</div>
+          <div class="faq-answer">Email us at leominsterclassof2016@gmail.com and we'll get back to you!</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Photo -->
+  <section class="class-photo-section">
+    <div class="class-photo-wrapper">
+      <img src="images/class-photo.jpg" alt="Leominster High School Class of 2016">
+      <div class="class-photo-overlay">
+        <span>Blue Devils Forever</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Have questions? Reach out and we'll get back to you.</p>
+      <a href="mailto:leominsterclassof2016@gmail.com" class="contact-email">leominsterclassof2016@gmail.com</a>
+      <div class="social-links">
+        <a href="https://www.facebook.com/groups/Leominster16" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook Group
+        </a>
+        <a href="https://www.instagram.com/leominsterclassof2016/" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Leominster High School Class of 2016 &mdash; 10-Year Reunion</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "John Smith",
+    "plusOne": true
+  },
+  {
+    "name": "Jane Doe",
+    "plusOne": false
+  }
+]
