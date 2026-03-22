@@ -34,58 +34,7 @@ body {
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 24px 24px;
-  background-attachment: fixed;
-}
-
-/* ===== Doodle accents ===== */
-.doodle-corner-tl,
-.doodle-corner-tr,
-.doodle-corner-bl,
-.doodle-corner-br {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.doodle-corner-tl {
-  top: 12px;
-  left: 12px;
-}
-
-.doodle-corner-tr {
-  top: 12px;
-  right: 12px;
-}
-
-.doodle-corner-bl {
-  bottom: 12px;
-  left: 12px;
-}
-
-.doodle-corner-br {
-  bottom: 12px;
-  right: 12px;
-}
-
-/* Chevron doodle (top-left style from flyer) */
-.doodle-chevrons {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.doodle-chevrons::before {
-  content: '>>>>';
-  font-size: 28px;
-  color: var(--blue);
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  letter-spacing: -4px;
-  opacity: 0.3;
+  background-attachment: scroll;
 }
 
 /* ===== Navigation ===== */
@@ -155,7 +104,7 @@ nav .nav-links a:hover {
 /* ===== Hero Section ===== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -369,7 +318,6 @@ section {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  border: 2px dashed var(--blue);
 }
 
 .ticket-box::before {
@@ -395,7 +343,7 @@ section {
 }
 
 .price-tag.early-bird {
-  color: #1a8a3a;
+  color: var(--blue);
   font-size: 2rem;
 }
 
