@@ -485,8 +485,10 @@ section {
 
 .class-photo-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center;
   opacity: 0.85;
 }
 
