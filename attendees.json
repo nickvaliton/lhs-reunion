@@ -1,10 +1,14 @@
 [
   {
-    "name": "Steph Amico",
+    "name": "Dylan Nadeau",
+    "plusOne": false
+  },
+  {
+    "name": "Evelyn (Zimmerman) Leger",
     "plusOne": true
   },
   {
-    "name": "Nicole Boyson",
+    "name": "Gabi Foster",
     "plusOne": false
   },
   {
@@ -16,11 +20,7 @@
     "plusOne": true
   },
   {
-    "name": "Gabi Foster",
-    "plusOne": false
-  },
-  {
-    "name": "Dylan Nadeau",
+    "name": "Mike Hutchinson",
     "plusOne": false
   },
   {
@@ -28,15 +28,19 @@
     "plusOne": false
   },
   {
-    "name": "Evelyn (Zimmerman) Leger",
-    "plusOne": true
+    "name": "Nicole Boyson",
+    "plusOne": false
   },
   {
     "name": "Shana McGranor",
     "plusOne": false
   },
   {
-    "name": "Mike Hutchinson",
-    "plusOne": false
+    "name": "Steph Amico",
+    "plusOne": true
+  },
+  {
+    "name": "Test Test",
+    "plusOne": true
   }
 ]
