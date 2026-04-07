@@ -1,5 +1,13 @@
 [
   {
+    "name": "Calee Marchand",
+    "plusOne": true
+  },
+  {
+    "name": "Daphne Palermo",
+    "plusOne": true
+  },
+  {
     "name": "Dylan Nadeau",
     "plusOne": false
   },
@@ -30,6 +38,10 @@
   {
     "name": "Nicole Boyson",
     "plusOne": false
+  },
+  {
+    "name": "Rusty Frederick",
+    "plusOne": true
   },
   {
     "name": "Shana McGranor",
