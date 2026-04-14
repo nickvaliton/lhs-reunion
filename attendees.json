@@ -1,5 +1,9 @@
 [
   {
+    "name": "Alyssa Valliere",
+    "plusOne": true
+  },
+  {
     "name": "Calee Marchand",
     "plusOne": true
   },
@@ -24,6 +28,18 @@
     "plusOne": true
   },
   {
+    "name": "Jess Murray",
+    "plusOne": false
+  },
+  {
+    "name": "Jordan Paskell",
+    "plusOne": true
+  },
+  {
+    "name": "Kelsey (Dunn) Moran",
+    "plusOne": true
+  },
+  {
     "name": "Lexi Foster",
     "plusOne": true
   },
@@ -37,7 +53,7 @@
   },
   {
     "name": "Nicole Boyson",
-    "plusOne": false
+    "plusOne": true
   },
   {
     "name": "Rusty Frederick",
