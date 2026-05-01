@@ -28,6 +28,10 @@
     "plusOne": false
   },
   {
+    "name": "Jacob DeCarolis",
+    "plusOne": false
+  },
+  {
     "name": "Jess Caless",
     "plusOne": true
   },
@@ -74,5 +78,9 @@
   {
     "name": "Steph Amico",
     "plusOne": true
+  },
+  {
+    "name": "Steve Moriasi",
+    "plusOne": false
   }
 ]
